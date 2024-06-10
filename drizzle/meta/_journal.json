@@ -8,6 +8,13 @@
       "when": 1716385313938,
       "tag": "0000_cloudy_warpath",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1718011938207,
+      "tag": "0001_unknown_giant_man",
+      "breakpoints": true
     }
   ]
 }
