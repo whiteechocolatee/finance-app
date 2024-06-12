@@ -12,7 +12,7 @@ import { useGetAccount } from '@/features/accounts/api/use-get-account';
 import { useOpenAccount } from '@/features/accounts/hooks/use-open-account';
 import { Loader2 } from 'lucide-react';
 import * as z from 'zod';
-import { AccountForm } from './account-form';
+import { AccountForm } from './transaction-form';
 import { useConfirm } from '@/hooks/use-confirm';
 
 const formSchema = insertAccountSchema.pick({ name: true });
