@@ -63,6 +63,7 @@ const app = new Hono()
           notes: transactions.notes,
           account: accounts.name,
           accountId: transactions.accountId,
+          categoryId: categories.id,
         })
         .from(transactions)
         .innerJoin(
@@ -128,6 +129,7 @@ const app = new Hono()
           amount: transactions.amount,
           notes: transactions.notes,
           accountId: transactions.accountId,
+          categoryId: transactions.categoryId,
         })
         .from(transactions)
         .innerJoin(

@@ -7,8 +7,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { useDeleteCategory } from '@/features/categories/api/use-delete-category';
-import { useOpenCategory } from '@/features/categories/hooks/use-open-category';
+import { useDeleteTransaction } from '@/features/transactions/api/use-delete-transaction';
+import { useOpenTransaction } from '@/features/transactions/hooks/use-open-transaction';
 import { useConfirm } from '@/hooks/use-confirm';
 import { Edit, MoreHorizontal, Trash } from 'lucide-react';
 
@@ -19,10 +19,10 @@ type Props = {
 export const Actions = ({ id }: Props) => {
   const [ConfirmDialog, confirm] = useConfirm(
     'Are you sure?',
-    'You are about to delete category',
+    'You are about to delete transaction',
   );
-  const deleteMutation = useDeleteCategory(id);
-  const { onOpen } = useOpenCategory();
+  const deleteMutation = useDeleteTransaction(id);
+  const { onOpen } = useOpenTransaction();
 
   const handleDelete = async () => {
     const ok = await confirm();
