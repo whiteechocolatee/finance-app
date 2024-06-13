@@ -126,17 +126,22 @@ export const ImportCard = ({
       }, {});
     });
 
-    const formattedData = arrayOfData.map((item) => {
-      const formattedDate = convertDateFormat(item.date);
+    const formattedData = arrayOfData
+      .map((item) => {
+        const formattedDate = convertDateFormat(item.date);
 
-      return {
-        ...item,
-        amount: convertAmountToMiliunits(
-          parseFloat(item.amount),
-        ),
-        date: formattedDate,
-      };
-    });
+        return {
+          ...item,
+          amount: convertAmountToMiliunits(
+            parseFloat(item.amount),
+          ),
+          date: formattedDate,
+        };
+      })
+      .filter(
+        (item) =>
+          item.amount !== null && item.date !== undefined,
+      );
 
     onSubmit(formattedData);
   };
