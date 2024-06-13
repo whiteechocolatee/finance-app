@@ -28,7 +28,7 @@ export const columns: ColumnDef<ResponseType>[] = [
         onCheckedChange={(value) =>
           table.toggleAllPageRowsSelected(!!value)
         }
-        aria-label='Select all'
+        aria-label='Выбрать все'
       />
     ),
     cell: ({ row }) => (
@@ -37,7 +37,7 @@ export const columns: ColumnDef<ResponseType>[] = [
         onCheckedChange={(value) =>
           row.toggleSelected(!!value)
         }
-        aria-label='Select row'
+        aria-label='Выбрать строку'
       />
     ),
     enableSorting: false,
@@ -54,14 +54,14 @@ export const columns: ColumnDef<ResponseType>[] = [
               column.getIsSorted() === 'asc',
             )
           }>
-          Name
+          Название
           <ArrowUpDown className='ml-2 h-4 w-4' />
         </Button>
       );
     },
   },
   {
-    accessorKey: 'Actions',
+    accessorKey: 'Действия',
     cell: ({ row }) => <Actions id={row.original.id} />,
   },
 ];

@@ -74,7 +74,7 @@ const TransactionsPage = () => {
 
     if (!accountId) {
       return toast.error(
-        'Please select an account to continue',
+        'Для того чтобы продожить выберите аккаунт!',
       );
     }
 
@@ -127,7 +127,7 @@ const TransactionsPage = () => {
       <Card className='border-none drop-shadow-sm'>
         <CardHeader className='gap-y-2 lg:flex-row lg:items-center lg:justify-between'>
           <CardTitle className='text-xl line-clamp-1'>
-            Transactions History
+            История Транзакций
           </CardTitle>
           <div className='flex flex-col lg:flex-row gap-y-2 items-center gap-x-2'>
             <Button
@@ -135,7 +135,7 @@ const TransactionsPage = () => {
               onClick={newTransaction.onOpen}
               size='sm'>
               <Plus className='size-4 mr-2' />
-              Add new
+              Добавить
             </Button>
             <UploadButton onUpload={onUpload} />
           </div>

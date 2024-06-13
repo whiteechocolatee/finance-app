@@ -36,7 +36,7 @@ export const CategoryColumn = ({
       {!category && (
         <TriangleAlert className='mr-2 size-4 shrink-0' />
       )}
-      {category || 'Uncategorized'}
+      {category || 'Без категории'}
     </div>
   );
 };

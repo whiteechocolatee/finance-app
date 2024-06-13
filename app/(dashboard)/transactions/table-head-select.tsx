@@ -7,7 +7,11 @@ type Props = {
   ) => void;
 };
 
-const options = ['amount', 'payee', 'date'];
+const options = [
+  { value: 'amount', name: 'Сумма' },
+  { value: 'payee', name: 'Источник' },
+  { value: 'date', name: 'Дата' },
+];
 
 import {
   Select,
@@ -38,24 +42,24 @@ export const TableHeadSelect = ({
           'focus:ring-offset-0 focus:ring-transparent outline-none border-none bg-transparent capitalize',
           currentSelection && 'text-blue-500',
         )}>
-        <SelectValue placeholder='Skip' />
+        <SelectValue placeholder='Пропустить' />
         <SelectContent>
-          <SelectItem value='skip'>Skip</SelectItem>
+          <SelectItem value='skip'>Пропустить</SelectItem>
           {options.map((option, index) => {
             const disabled =
               Object.values(selectedColumns).includes(
-                option,
+                option.value,
               ) &&
               selectedColumns[`column_${columnIndex}`] !==
-                option;
+                option.value;
 
             return (
               <SelectItem
                 key={index}
-                value={option}
+                value={option.value}
                 disabled={disabled}
                 className='capitalize'>
-                {option}
+                {option.name}
               </SelectItem>
             );
           })}

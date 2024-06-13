@@ -15,23 +15,23 @@ import { useMedia } from 'react-use';
 const routes = [
   {
     href: '/',
-    label: 'Overview',
+    label: 'Главная',
   },
   {
     href: '/transactions',
-    label: 'Transactions',
+    label: 'Транзакции',
   },
   {
     href: '/accounts',
-    label: 'Accounts',
+    label: 'Аккаунты',
   },
   {
     href: '/categories',
-    label: 'Categories',
+    label: 'Категории',
   },
   {
     href: '/settings',
-    label: 'Settings',
+    label: 'Настройки',
   },
 ];
 

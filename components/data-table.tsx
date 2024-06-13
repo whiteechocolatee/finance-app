@@ -42,8 +42,8 @@ export function DataTable<TData, TValue>({
   disabled,
 }: DataTableProps<TData, TValue>) {
   const [ConfirmDialog, confirm] = useConfirm(
-    'Are you sure?',
-    'You are about to perform a bulk delete',
+    'Вы уверены?',
+    'Вы хотите произвести массовое удаление!',
   );
 
   const [sorting, setSorting] =
@@ -76,7 +76,11 @@ export function DataTable<TData, TValue>({
       <ConfirmDialog />
       <div className='flex items-center py-4'>
         <Input
-          placeholder={`Filter ${filterKey}`}
+          placeholder={`Искать по ${
+            filterKey === 'name'
+              ? 'названию'
+              : 'источнику трат/доходов'
+          }`}
           value={
             (table
               .getColumn(filterKey)
@@ -107,12 +111,12 @@ export function DataTable<TData, TValue>({
             variant='outline'
             className='ml-auto font-normal text-xs'>
             <Trash className='size-4 mr-2' />
-            Delete (
+            Удалить (
             {
               table.getFilteredSelectedRowModel().rows
                 .length
             }
-            ) rows
+            ) строк
           </Button>
         )}
       </div>
@@ -159,7 +163,7 @@ export function DataTable<TData, TValue>({
                 <TableCell
                   colSpan={columns.length}
                   className='h-24 text-center'>
-                  No results.
+                  Нет результатов
                 </TableCell>
               </TableRow>
             )}
@@ -169,22 +173,22 @@ export function DataTable<TData, TValue>({
       <div className='flex items-center justify-end space-x-2 py-4'>
         <div className='flex-1 text-sm text-muted-foreground'>
           {table.getFilteredSelectedRowModel().rows.length}{' '}
-          of {table.getFilteredRowModel().rows.length}{' '}
-          row(s) selected.
+          из {table.getFilteredRowModel().rows.length} строк
+          выбрано.
         </div>
         <Button
           variant='outline'
           size='sm'
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}>
-          Previous
+          Предыдущая
         </Button>
         <Button
           variant='outline'
           size='sm'
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}>
-          Next
+          Следующая
         </Button>
       </div>
     </div>

@@ -17,7 +17,7 @@ export const UploadButton = ({ onUpload }: Props) => {
           className='w-full lg:w-auto'
           {...getRootProps()}>
           <UploadIcon className='size-4 mr-2' />
-          Import
+          Импорт (csv)
         </Button>
       )}
     </CSVReader>

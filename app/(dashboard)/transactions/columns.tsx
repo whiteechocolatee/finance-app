@@ -59,7 +59,7 @@ export const columns: ColumnDef<ResponseType>[] = [
               column.getIsSorted() === 'asc',
             )
           }>
-          Date
+          Дата
           <ArrowUpDown className='ml-2 h-4 w-4' />
         </Button>
       );
@@ -81,7 +81,7 @@ export const columns: ColumnDef<ResponseType>[] = [
               column.getIsSorted() === 'asc',
             )
           }>
-          Category
+          Категория
           <ArrowUpDown className='ml-2 h-4 w-4' />
         </Button>
       );
@@ -109,7 +109,7 @@ export const columns: ColumnDef<ResponseType>[] = [
               column.getIsSorted() === 'asc',
             )
           }>
-          Payee
+          Источник
           <ArrowUpDown className='ml-2 h-4 w-4' />
         </Button>
       );
@@ -126,7 +126,7 @@ export const columns: ColumnDef<ResponseType>[] = [
               column.getIsSorted() === 'asc',
             )
           }>
-          Amount
+          Сумма
           <ArrowUpDown className='ml-2 h-4 w-4' />
         </Button>
       );
@@ -154,7 +154,7 @@ export const columns: ColumnDef<ResponseType>[] = [
               column.getIsSorted() === 'asc',
             )
           }>
-          Account
+          Аккаунт
           <ArrowUpDown className='ml-2 h-4 w-4' />
         </Button>
       );
@@ -169,7 +169,7 @@ export const columns: ColumnDef<ResponseType>[] = [
     },
   },
   {
-    accessorKey: 'Actions',
+    accessorKey: 'Действия',
     cell: ({ row }) => <Actions id={row.original.id} />,
   },
 ];

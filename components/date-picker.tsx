@@ -36,7 +36,7 @@ export const DatePicker = ({
           {value ? (
             format(value, 'PPP')
           ) : (
-            <span>Pick a date</span>
+            <span>Выбрать дату</span>
           )}
         </Button>
       </PopoverTrigger>
