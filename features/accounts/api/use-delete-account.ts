@@ -23,7 +23,7 @@ export const useDeleteAccount = (id?: string) => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Account deleted!');
+      toast.success('Счет удален!');
       queryClient.invalidateQueries({
         queryKey: ['account', { id }],
       });
@@ -38,7 +38,7 @@ export const useDeleteAccount = (id?: string) => {
       });
     },
     onError: () => {
-      toast.error('Failed to delete account');
+      toast.error('Не удалось удалить счет');
     },
   });
 

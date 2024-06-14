@@ -28,8 +28,8 @@ type FormValues = z.input<typeof formSchema>;
 export const EditTransactionSheet = () => {
   const { isOpen, onClose, id } = useOpenTransaction();
   const [ConfirmDialog, confirm] = useConfirm(
-    'Are you sure?',
-    'You are about to delete this transaction',
+    'Вы уверены?',
+    'Вы собираетесь удалить эту транзакцию',
   );
 
   const transactionQuery = useGetTransaction(id);
@@ -118,9 +118,11 @@ export const EditTransactionSheet = () => {
       <Sheet open={isOpen} onOpenChange={onClose}>
         <SheetContent className='space-y-4'>
           <SheetHeader>
-            <SheetTitle>Edit Transaction</SheetTitle>
+            <SheetTitle>
+              Редактирование транзакции
+            </SheetTitle>
             <SheetDescription>
-              Edit an existing transaction
+              Редактирование существующей транзакции
             </SheetDescription>
           </SheetHeader>
           {isLoading ? (

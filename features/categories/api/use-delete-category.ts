@@ -23,7 +23,7 @@ export const useDeleteCategory = (id?: string) => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Category deleted!');
+      toast.success('Категория удалена!');
       queryClient.invalidateQueries({
         queryKey: ['category', { id }],
       });
@@ -38,7 +38,7 @@ export const useDeleteCategory = (id?: string) => {
       });
     },
     onError: () => {
-      toast.error('Failed to delete category');
+      toast.error('Не удалось удалить категорию');
     },
   });
 

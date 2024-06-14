@@ -23,7 +23,7 @@ const routes = [
   },
   {
     href: '/accounts',
-    label: 'Аккаунты',
+    label: 'Счета',
   },
   {
     href: '/categories',

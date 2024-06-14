@@ -100,10 +100,10 @@ export const TransactionForm = ({
           name='accountId'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Account</FormLabel>
+              <FormLabel>Счет</FormLabel>
               <FormControl>
                 <Select
-                  placeholder='Select an account'
+                  placeholder='Выберите счет'
                   options={accountOptions}
                   value={field.value}
                   onChange={field.onChange}
@@ -118,10 +118,10 @@ export const TransactionForm = ({
           name='categoryId'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Category</FormLabel>
+              <FormLabel>Категория</FormLabel>
               <FormControl>
                 <Select
-                  placeholder='Select a category'
+                  placeholder='Выберите категорию'
                   options={categoryOptions}
                   value={field.value}
                   onChange={field.onChange}
@@ -136,12 +136,12 @@ export const TransactionForm = ({
           name='payee'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Payee</FormLabel>
+              <FormLabel>Получатель</FormLabel>
               <FormControl>
                 <Input
                   {...field}
                   disabled={disabled}
-                  placeholder='Add a payee'
+                  placeholder='Добавить получателя'
                 />
               </FormControl>
             </FormItem>
@@ -151,7 +151,7 @@ export const TransactionForm = ({
           name='amount'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Amount</FormLabel>
+              <FormLabel>Сумма</FormLabel>
               <FormControl>
                 <AmountInput
                   {...field}
@@ -166,20 +166,22 @@ export const TransactionForm = ({
           name='notes'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Notes</FormLabel>
+              <FormLabel>Заметки</FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
                   disabled={disabled}
                   value={field.value || ''}
-                  placeholder='Optional notes'
+                  placeholder='Опционально'
                 />
               </FormControl>
             </FormItem>
           )}
         />
         <Button className='w-full' disabled={disabled}>
-          {id ? 'Save changes' : 'Create transaction'}
+          {id
+            ? 'Сохранить изменения'
+            : 'Создать транзакцию'}
         </Button>
         {!!id && (
           <Button
@@ -189,7 +191,7 @@ export const TransactionForm = ({
             className='w-full'
             variant='outline'>
             <Trash className='size-4 mr-2' />
-            Delete transaction
+            Удалить транзакцию
           </Button>
         )}
       </form>

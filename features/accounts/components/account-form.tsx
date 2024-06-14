@@ -53,11 +53,11 @@ export const AccountForm = ({
           name='name'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Имя</FormLabel>
               <FormControl>
                 <Input
                   disabled={disabled}
-                  placeholder='ex. Cash, Bank'
+                  placeholder='пр. Monobank, Privat24'
                   {...field}
                 />
               </FormControl>
@@ -65,7 +65,7 @@ export const AccountForm = ({
           )}
         />
         <Button className='w-full' disabled={disabled}>
-          {id ? 'Save changes' : 'Create an account'}
+          {id ? 'Сохранить изменения' : 'Создать счет'}
         </Button>
         {!!id && (
           <Button
@@ -75,7 +75,7 @@ export const AccountForm = ({
             className='w-full'
             variant='outline'>
             <Trash className='size-4 mr-2' />
-            Delete account
+            Удалить счет
           </Button>
         )}
       </form>

@@ -23,7 +23,7 @@ export const useDeleteTransaction = (id?: string) => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Transaction deleted!');
+      toast.success('Транзакция удалена!');
       queryClient.invalidateQueries({
         queryKey: ['transaction', { id }],
       });
@@ -35,7 +35,7 @@ export const useDeleteTransaction = (id?: string) => {
       });
     },
     onError: () => {
-      toast.error('Failed to delete a transaction');
+      toast.error('Не удалось удалить транзакцию');
     },
   });
 

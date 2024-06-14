@@ -30,7 +30,7 @@ export const useEditTransaction = (id?: string) => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Transaction updated!');
+      toast.success('Транзакция обновлена!');
       queryClient.invalidateQueries({
         queryKey: ['transaction', { id }],
       });
@@ -42,7 +42,7 @@ export const useEditTransaction = (id?: string) => {
       });
     },
     onError: () => {
-      toast.error('Failed to add a transaction');
+      toast.error('Не удалось добавить транзакцию');
     },
   });
 

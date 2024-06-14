@@ -58,9 +58,9 @@ export const useSelectAccount = (): [
       <Dialog open={promise !== null}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Select account</DialogTitle>
+            <DialogTitle>Выберите счет</DialogTitle>
             <DialogDescription>
-              Please select an account to continue
+              Пожалуйста, выберите счет, чтобы продолжить
             </DialogDescription>
           </DialogHeader>
           <Select
@@ -79,9 +79,11 @@ export const useSelectAccount = (): [
             <Button
               variant='outline'
               onClick={handleCancel}>
-              Cancel
+              Отменить
             </Button>
-            <Button onClick={handleConfirm}>Confirm</Button>
+            <Button onClick={handleConfirm}>
+              Подтвердить
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

@@ -78,8 +78,8 @@ const AmountInput = ({
         disabled={disabled}
       />
       <p className='text-xs text-muted-foreground mt-2'>
-        {isIncome && 'This will count as income'}
-        {isExpense && 'This will count as expense'}
+        {isIncome && 'Это будет считаться доходом'}
+        {isExpense && 'Это будет считаться расходом'}
       </p>
     </div>
   );

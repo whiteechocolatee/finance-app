@@ -31,13 +31,13 @@ export const useCreateCategory = () => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Category created!');
+      toast.success('Категория создана!');
       queryClient.invalidateQueries({
         queryKey: ['categories'],
       });
     },
     onError: () => {
-      toast.error('Failed to create category');
+      toast.error('Не удалось создать категорию');
     },
   });
 

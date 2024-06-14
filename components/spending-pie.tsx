@@ -6,9 +6,9 @@ import {
   Target,
 } from 'lucide-react';
 import { useState } from 'react';
-import { AreaVariant } from './area-variant';
-import { BarVariant } from './bar-variant';
-import { LineVariant } from './line-variant';
+import { PieVariant } from './pie-variant';
+import { RadarVariant } from './radar-variant';
+import { RadialVariant } from './radial-variant';
 import {
   Card,
   CardContent,
@@ -22,9 +22,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from './ui/select';
-import { PieVariant } from './pie-variant';
-import { RadarVariant } from './radar-variant';
-import { RadialVariant } from './radial-variant';
 import { Skeleton } from './ui/skeleton';
 
 type Props = {

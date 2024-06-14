@@ -30,7 +30,7 @@ export const useEditAccount = (id?: string) => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Account updated!');
+      toast.success('Счет обновлен!');
       queryClient.invalidateQueries({
         queryKey: ['account', { id }],
       });
@@ -45,7 +45,7 @@ export const useEditAccount = (id?: string) => {
       });
     },
     onError: () => {
-      toast.error('Failed to create account');
+      toast.error('Не удалось редактировать счет');
     },
   });
 

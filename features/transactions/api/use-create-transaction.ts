@@ -31,13 +31,13 @@ export const useCreateTransaction = () => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Transaction created!');
+      toast.success('Транзакция создана!');
       queryClient.invalidateQueries({
         queryKey: ['transactions'],
       });
     },
     onError: () => {
-      toast.error('Failed to create transaction');
+      toast.error('Не удалось создать транзакцию');
     },
   });
 

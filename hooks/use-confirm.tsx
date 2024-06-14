@@ -1,15 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogHeader,
   DialogFooter,
+  DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-
-import React from 'react';
+import { useState } from 'react';
 
 export const useConfirm = (
   title: string,
@@ -50,9 +48,11 @@ export const useConfirm = (
             <Button
               variant='outline'
               onClick={handleCancel}>
-              Cancel
+              Отменить
             </Button>
-            <Button onClick={handleConfirm}>Confirm</Button>
+            <Button onClick={handleConfirm}>
+              Подтвердить
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

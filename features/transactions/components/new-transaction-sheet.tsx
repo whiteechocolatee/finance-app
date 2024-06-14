@@ -71,9 +71,9 @@ export const NewTransactionSheet = () => {
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent className='space-y-4'>
         <SheetHeader>
-          <SheetTitle>New Transaction</SheetTitle>
+          <SheetTitle>Новая транзакция</SheetTitle>
           <SheetDescription>
-            Add a new transaction
+            Добавить новую транзакцию
           </SheetDescription>
         </SheetHeader>
         {isLoading ? (

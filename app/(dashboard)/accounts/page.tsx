@@ -47,7 +47,7 @@ const AccountsPage = () => {
       <Card className='border-none drop-shadow-sm'>
         <CardHeader className='gap-y-2 lg:flex-row lg:items-center lg:justify-between'>
           <CardTitle className='text-xl line-clamp-1'>
-            Аккаунты
+            Счета
           </CardTitle>
           <Button onClick={newAccount.onOpen} size='sm'>
             <Plus className='size-4 mr-2' />
@@ -57,9 +57,12 @@ const AccountsPage = () => {
         <CardContent>
           <DataTable
             onDelete={(row) => {
-              const ids = row.map((r) => r.original.id);
-
-              deleteAccounts.mutate({ ids });
+              if (Array.isArray(row)) {
+                const ids = row
+                  .map((r) => r.original?.id)
+                  .filter(Boolean);
+                deleteAccounts.mutate({ ids });
+              }
             }}
             filterKey='name'
             columns={columns}

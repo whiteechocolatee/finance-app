@@ -161,7 +161,7 @@ export const columns: ColumnDef<ResponseType>[] = [
               column.getIsSorted() === 'asc',
             )
           }>
-          Аккаунт
+          Счет
           <ArrowUpDown className='ml-2 h-4 w-4' />
         </Button>
       );

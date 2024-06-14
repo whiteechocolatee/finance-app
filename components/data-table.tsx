@@ -1,4 +1,4 @@
-'use client';
+import * as React from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -24,13 +24,12 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import { Trash } from 'lucide-react';
-import * as React from 'react';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   filterKey: string;
-  onDelete: (rows: Row<TData[]>) => void;
+  onDelete: (rows: Row<TData>[]) => void; // Changed to accept array of Row<TData>
   disabled?: boolean;
 }
 

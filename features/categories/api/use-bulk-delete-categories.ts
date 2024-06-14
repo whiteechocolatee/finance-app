@@ -31,7 +31,7 @@ export const useBulkDeleteCategories = () => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Categories deleted!');
+      toast.success('Категории удалены!');
       queryClient.invalidateQueries({
         queryKey: ['categories'],
       });
@@ -40,7 +40,7 @@ export const useBulkDeleteCategories = () => {
       });
     },
     onError: () => {
-      toast.error('Failed to delete categories');
+      toast.error('Не удалось удалить категории');
     },
   });
 

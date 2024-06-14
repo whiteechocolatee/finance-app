@@ -22,8 +22,8 @@ type FormValues = z.input<typeof formSchema>;
 export const EditAccountSheet = () => {
   const { isOpen, onClose, id } = useOpenAccount();
   const [ConfirmDialog, confirm] = useConfirm(
-    'Are you sure?',
-    'You are about to delete this account',
+    'Вы уверены?',
+    'После удаления все данные связанные с этим счетом пропадут!',
   );
 
   const accountQuery = useGetAccount(id);
@@ -69,9 +69,9 @@ export const EditAccountSheet = () => {
       <Sheet open={isOpen} onOpenChange={onClose}>
         <SheetContent className='space-y-4'>
           <SheetHeader>
-            <SheetTitle>Edit Account</SheetTitle>
+            <SheetTitle>Редактировать</SheetTitle>
             <SheetDescription>
-              Edit an existing account
+              Редактировать существующий счет
             </SheetDescription>
           </SheetHeader>
           {isLoading ? (

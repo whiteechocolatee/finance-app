@@ -31,7 +31,7 @@ export const useBulkDeleteTransactions = () => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Transactions deleted!');
+      toast.success('Транзакции удалены!');
       queryClient.invalidateQueries({
         queryKey: ['transactions'],
       });
@@ -40,7 +40,7 @@ export const useBulkDeleteTransactions = () => {
       });
     },
     onError: () => {
-      toast.error('Failed to delete transactions');
+      toast.error('Не удалось удалить транзакции');
     },
   });
 

@@ -30,7 +30,7 @@ export const useEditCategory = (id?: string) => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Category updated!');
+      toast.success('Категория обновлена!');
       queryClient.invalidateQueries({
         queryKey: ['category', { id }],
       });
@@ -45,7 +45,7 @@ export const useEditCategory = (id?: string) => {
       });
     },
     onError: () => {
-      toast.error('Failed to create category');
+      toast.error('Не удалось создать категорию');
     },
   });
 

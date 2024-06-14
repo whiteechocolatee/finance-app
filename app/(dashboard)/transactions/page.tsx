@@ -74,7 +74,7 @@ const TransactionsPage = () => {
 
     if (!accountId) {
       return toast.error(
-        'Для того чтобы продожить выберите аккаунт!',
+        'Для того чтобы продожить выберите счет!',
       );
     }
 
