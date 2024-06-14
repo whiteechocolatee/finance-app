@@ -12,11 +12,11 @@ function SignUpPage() {
       <div className='h-full lg:flex flex-col items-center justify-center px-4'>
         <div className='text-center space-y-4 pt-16 text-[#2e2a47]'>
           <h1 className='font-bold text-3xl'>
-            Welcome back!
+            С возвращением!
           </h1>
           <p className='text-base text-[#7e8ca0]'>
-            Log in or Create Account to get back to your
-            dashboard!
+            Войдите в систему или создайте учетную запись,
+            чтобы вернуться к своей приборной панели!
           </p>
         </div>
         <div className='flex items-center justify-center mt-8'>
@@ -34,7 +34,7 @@ function SignUpPage() {
           alt='logo'
           height={100}
           width={250}
-        /> 
+        />
       </div>
     </div>
   );

@@ -5,12 +5,14 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
+import { ruRU } from '@clerk/localizations';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'PennyPlanner',
-  description: 'Master Your Money, One Cent at a Time',
+  description:
+    'Контролируй свои финансы, копейка к копейке',
 };
 
 export default function RootLayout({
@@ -19,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang='en'>
+    <ClerkProvider localization={ruRU}>
+      <html lang='ru'>
         <body className={inter.className}>
           <QueryProvider>
             <SheetProvider />
