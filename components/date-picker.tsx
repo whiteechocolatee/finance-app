@@ -10,6 +10,7 @@ import {
   PopoverTrigger,
 } from './ui/popover';
 import { Calendar } from './ui/calendar';
+import { ru } from 'date-fns/locale';
 
 type Props = {
   value?: Date;
@@ -34,7 +35,9 @@ export const DatePicker = ({
           )}>
           <CalendarIcon className='size-4 mr-2' />
           {value ? (
-            format(value, 'PPP')
+            format(value, 'PPP', {
+              locale: ru,
+            })
           ) : (
             <span>Выбрать дату</span>
           )}

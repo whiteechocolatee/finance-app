@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { ImportTable } from './import-table';
 import { convertAmountToMiliunits } from '@/lib/utils';
 import { format, parse } from 'date-fns';
+import { ru } from 'date-fns/locale';
 
 const dateFormat = 'dd.MM.yyyy HH:mm:ss';
 const outputFormat = 'yyyy-MM-dd';
@@ -79,6 +80,9 @@ export const ImportCard = ({
       const formattedDate = format(
         parsedDate,
         outputFormat,
+        {
+          locale: ru,
+        },
       );
 
       return formattedDate;

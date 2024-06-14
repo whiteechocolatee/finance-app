@@ -14,6 +14,7 @@ import { format } from 'date-fns';
 import { AccountColumn } from './account-column';
 import { Actions } from './actions';
 import { CategoryColumn } from './category-column';
+import { ru } from 'date-fns/locale';
 
 export type ResponseType = InferResponseType<
   typeof client.api.transactions.$get,
@@ -67,7 +68,13 @@ export const columns: ColumnDef<ResponseType>[] = [
     cell: ({ row }) => {
       const date = row.getValue('date') as Date;
 
-      return <span>{format(date, 'dd MMMM, yyyy')}</span>;
+      return (
+        <span>
+          {format(date, 'dd MMMM, yyyy', {
+            locale: ru,
+          })}
+        </span>
+      );
     },
   },
   {

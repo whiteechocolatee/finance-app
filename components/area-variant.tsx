@@ -8,6 +8,7 @@ import {
 } from 'recharts';
 import { format } from 'date-fns';
 import { CustomTooltip } from './custom-tooltip';
+import { ru } from 'date-fns/locale';
 
 type Props = {
   data: {
@@ -62,7 +63,11 @@ export const AreaVariant = ({ data }: Props) => {
           axisLine={false}
           tickLine={false}
           dataKey={'date'}
-          tickFormatter={(value) => format(value, 'dd MMM')}
+          tickFormatter={(value) =>
+            format(value, 'dd MMM', {
+              locale: ru,
+            })
+          }
           style={{ fontSize: '12px' }}
           tickMargin={16}
         />
