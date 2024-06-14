@@ -7,6 +7,7 @@ import {
   UserButton,
 } from '@clerk/nextjs';
 import { Loader2 } from 'lucide-react';
+import { Filters } from './filters';
 
 const Header = () => {
   return (
@@ -25,6 +26,7 @@ const Header = () => {
           </ClerkLoading>
         </div>
         <WelcomeMessage />
+        <Filters />
       </div>
     </header>
   );

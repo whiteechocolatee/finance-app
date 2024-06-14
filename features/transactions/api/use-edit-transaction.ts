@@ -37,7 +37,9 @@ export const useEditTransaction = (id?: string) => {
       queryClient.invalidateQueries({
         queryKey: ['transactions'],
       });
-      // TODO: invalidate summary
+      queryClient.invalidateQueries({
+        queryKey: ['summary'],
+      });
     },
     onError: () => {
       toast.error('Failed to add a transaction');

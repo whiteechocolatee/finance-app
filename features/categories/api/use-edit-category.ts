@@ -40,7 +40,9 @@ export const useEditCategory = (id?: string) => {
       queryClient.invalidateQueries({
         queryKey: ['transactions'],
       });
-      // TODO: invalidate summary and transactions
+      queryClient.invalidateQueries({
+        queryKey: ['summary'],
+      });
     },
     onError: () => {
       toast.error('Failed to create category');

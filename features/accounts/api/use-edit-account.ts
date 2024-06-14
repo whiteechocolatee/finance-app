@@ -40,7 +40,9 @@ export const useEditAccount = (id?: string) => {
       queryClient.invalidateQueries({
         queryKey: ['transactions'],
       });
-      // TODO: invalidate summary
+      queryClient.invalidateQueries({
+        queryKey: ['summary'],
+      });
     },
     onError: () => {
       toast.error('Failed to create account');
